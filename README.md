@@ -75,24 +75,17 @@ También se observaron situaciones en las que el robot repetía continuamente lo
 
 
 
----
+
 
 # ✅ Conclusión
 
-Esta práctica ha permitido desarrollar un sistema básico de navegación autónoma utilizando únicamente información procedente del sensor láser.
+Esta práctica ha permitido desarrollar un sistema básico de navegación autónoma utilizando únicamente información procedente del sensor láser. A partir de una primera implementación sencilla, se fueron detectando diferentes problemas como colisiones, bloqueos en esquinas y ciclos repetitivos. Mediante el uso de una máquina de estados, regiones del sensor láser, temporizadores y comportamientos pseudoaleatorios se consiguió desarrollar una estrategia de navegación más robusta. La práctica también ha servido como introducción al desarrollo de comportamientos reactivos en robots móviles y al uso de Python dentro de un entorno de simulación robótica.
 
-A partir de una primera implementación sencilla, se fueron detectando diferentes problemas como colisiones, bloqueos en esquinas y ciclos repetitivos.
 
-Mediante el uso de una máquina de estados, regiones del sensor láser, temporizadores y comportamientos pseudoaleatorios se consiguió desarrollar una estrategia de navegación más robusta.
+## Autor
 
-La práctica también ha servido como introducción al desarrollo de comportamientos reactivos en robots móviles y al uso de Python dentro de un entorno de simulación robótica.
-
----
-
-## 👨‍💻 Autor
-
-**Nombre:** TU NOMBRE  
-**Asignatura:** TU ASIGNATURA  
+**Nombre:** Millán Rioja  
+**Asignatura:** Robótica Móvil 
 **Curso:** 2026/2027  
 **Proyecto:** Basic Vacuum Cleaner  
 
