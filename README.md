@@ -63,184 +63,17 @@ Uno de los primeros problemas fue que el robot podía seguir intentando avanzar 
 
 ## Robot atrapado girando
 
-En algunos puntos del mapa el robot podía permanecer demasiado tiempo dentro del estado GIRANDO. Para evitarlo se añadió un tiempo máximo.
-
-
-Esto permite que el robot vuelva a retroceder y pruebe otra maniobra.
-
----
+En algunos puntos del mapa el robot podía permanecer demasiado tiempo dentro del estado GIRANDO. Para evitarlo se añadió un tiempo máximo. Esto permite que el robot vuelva a retroceder y pruebe otra maniobra.
 
 ## Patrones repetitivos
 
-También se observaron situaciones en las que el robot repetía continuamente los mismos movimientos.
+También se observaron situaciones en las que el robot repetía continuamente los mismos movimientos. Para reducir este problema se añadió aleatoriedad al sentido de giro.
 
-Por ejemplo:
 
-```text
-adelante
-atrás
-giro
-adelante
-atrás
-giro contrario
-adelante
-atrás
-...
-```
+# Resultados
 
-Para reducir este problema se añadió aleatoriedad al sentido de giro.
 
----
 
-# 💻 Estructura general del código
-
-La estructura principal del programa es similar a:
-
-```python
-while True:
-
-    laser = HAL.getLaserData()
-
-    if len(laser.values) > 0:
-
-        # Leer sensores
-
-        if estado == "AVANZANDO":
-            # Avanzar
-            # Detectar obstáculos
-
-        elif estado == "RETROCEDIENDO":
-            # Retroceder
-            # Controlar tiempo
-
-        elif estado == "GIRANDO":
-            # Decidir dirección
-            # Girar
-
-    Frequency.tick()
-```
-
-Esta estructura permite ejecutar continuamente el comportamiento del robot sin bloquear el programa.
-
----
-
-# 📊 Esquema del funcionamiento
-
-```text
-                     ┌───────────────┐
-                     │   AVANZANDO   │
-                     └───────┬───────┘
-                             │
-                      obstáculo cerca
-                             │
-                             ▼
-                  ┌─────────────────────┐
-                  │   RETROCEDIENDO     │
-                  └──────────┬──────────┘
-                             │
-                       pasa un tiempo
-                             │
-                             ▼
-                     ┌───────────────┐
-                     │    GIRANDO    │
-                     └───────┬───────┘
-                             │
-                        espacio libre
-                             │
-                             └──────────────► AVANZANDO
-```
-
----
-
-# 📸 Resultados
-
-En esta sección se pueden añadir capturas o GIFs mostrando el funcionamiento del robot.
-
-Ejemplo:
-
-```markdown
-![Robot funcionando](images/resultado.gif)
-```
-
-También puede ser interesante mostrar diferentes situaciones.
-
-### Navegación normal
-
-```markdown
-![Navegación](images/navegacion.png)
-```
-
-### Detección de obstáculos
-
-```markdown
-![Obstáculo](images/obstaculo.png)
-```
-
-### Situación de bloqueo
-
-```markdown
-![Bloqueo](images/bloqueo.png)
-```
-
----
-
-# 📁 Organización del repositorio
-
-Una posible estructura para el proyecto es:
-
-```text
-Basic-Vacuum-Cleaner/
-│
-├── README.md
-│
-├── code/
-│   └── vacuum_cleaner.py
-│
-├── images/
-│   ├── simulador.png
-│   ├── navegacion.png
-│   ├── obstaculo.png
-│   ├── bloqueo.png
-│   └── resultado.gif
-│
-└── docs/
-```
-
----
-
-# 🧪 Posibles mejoras
-
-Aunque el comportamiento actual permite al robot desplazarse por el entorno, existen diferentes mejoras posibles:
-
-- Ajustar mejor las distancias de detección.
-- Optimizar las velocidades de movimiento.
-- Mejorar la selección de la dirección de giro.
-- Utilizar medias de las regiones del láser para estimar el espacio disponible.
-- Detectar situaciones de bloqueo.
-- Introducir mayor aleatoriedad en determinados comportamientos.
-- Implementar movimientos en espiral.
-- Analizar la superficie recorrida.
-- Reducir zonas recorridas repetidamente.
-
----
-
-# 📚 Conceptos aprendidos
-
-Durante esta práctica se han trabajado diferentes conceptos relacionados con programación y robótica:
-
-- Programación básica en Python.
-- Bucles `while`.
-- Condicionales `if`, `elif` y `else`.
-- Listas y rangos.
-- Funciones como `min()`.
-- Uso de temporizadores con `time`.
-- Generación de valores aleatorios.
-- Lectura de sensores.
-- Control de velocidad lineal y angular.
-- Máquinas de estados.
-- Navegación reactiva.
-- Detección y evasión de obstáculos.
-- Depuración de comportamientos robóticos.
 
 ---
 
@@ -263,6 +96,4 @@ La práctica también ha servido como introducción al desarrollo de comportamie
 **Curso:** 2026/2027  
 **Proyecto:** Basic Vacuum Cleaner  
 
----
 
-⭐ *Proyecto desarrollado utilizando Robotics Academy / Unibotics.*
