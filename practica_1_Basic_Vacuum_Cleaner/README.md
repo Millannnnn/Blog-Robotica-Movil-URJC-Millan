@@ -31,7 +31,7 @@ Se utilizan principalmente tres estados:
 
 Durante este estado el robot se mueve hacia delante.
 Mientras avanza, se comprueba continuamente la distancia frontal.
-Si el robot detecta un obstáculo demasiado cerca, cambia al estado `RETROCEDIENDO`.
+Si el robot detecta un obstáculo demasiado cerca, cambia al estado RETROCEDIENDO.
 
 ## Estado RETROCEDIENDO
 
