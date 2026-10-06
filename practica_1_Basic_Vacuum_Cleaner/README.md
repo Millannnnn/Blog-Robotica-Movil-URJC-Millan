@@ -83,7 +83,8 @@ Esta práctica ha permitido desarrollar un sistema básico de navegación autón
 ## Autor
 
 **Nombre:** Millán Rioja  
-**Asignatura:** Robótica Móvil 
+**Asignatura:** Robótica Móvil
+
 **Curso:** 2026/2027  
 **Proyecto:** Basic Vacuum Cleaner  
 
