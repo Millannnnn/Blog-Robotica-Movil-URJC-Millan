@@ -1,4 +1,3 @@
-# Blog Robotica Movil-URJC-Millan
 # Basic Vacuum Cleaner
 
 ## Descripción del proyecto
