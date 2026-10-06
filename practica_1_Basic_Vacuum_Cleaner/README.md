@@ -72,8 +72,7 @@ También se observaron situaciones en las que el robot repetía continuamente lo
 # Resultados
 
 
-
-
+https://github.com/user-attachments/assets/a26ee870-c3eb-480e-a72c-89b47a268eb5
 
 
 # Conclusión
